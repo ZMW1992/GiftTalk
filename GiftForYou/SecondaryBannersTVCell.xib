@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="NVX-Vc-sQ4" customClass="SecondaryBannersTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NVX-Vc-sQ4" id="OCP-Q8-Uop">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS6-jd-rPB">
+                        <rect key="frame" x="5" y="2" width="310" height="85"/>
+                        <color key="backgroundColor" red="0.86751037509999995" green="1" blue="0.45016571290000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="TS6-jd-rPB" secondAttribute="bottom" constant="2" id="BaG-aS-lYd"/>
+                    <constraint firstItem="TS6-jd-rPB" firstAttribute="leading" secondItem="OCP-Q8-Uop" secondAttribute="leading" constant="5" id="Kbc-Op-fWZ"/>
+                    <constraint firstItem="TS6-jd-rPB" firstAttribute="top" secondItem="OCP-Q8-Uop" secondAttribute="top" constant="2" id="d8P-2a-G9Q"/>
+                    <constraint firstAttribute="trailing" secondItem="TS6-jd-rPB" secondAttribute="trailing" constant="5" id="mNP-nG-ddT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="scrollView" destination="TS6-jd-rPB" id="wgc-bm-X2a"/>
+            </connections>
+            <point key="canvasLocation" x="378" y="290"/>
+        </tableViewCell>
+    </objects>
+</document>

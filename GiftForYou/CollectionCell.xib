@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="tnT-4Q-nBP" customClass="CollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tnT-4Q-nBP" id="mu8-8Q-bVG">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgk-Ms-F3Q">
+                        <rect key="frame" x="0.0" y="30" width="320" height="94"/>
+                    </scrollView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="专题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYH-3u-uZW">
+                        <rect key="frame" x="0.0" y="5" width="40" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="e7x-An-GGL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuq-7v-Xf0">
+                        <rect key="frame" x="255" y="6" width="65" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="cHt-Qw-Ttt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="查看全部&gt;   ">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="AllBtnClick:" destination="tnT-4Q-nBP" eventType="touchUpInside" id="pKN-Fq-kgG"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kgk-Ms-F3Q" firstAttribute="top" secondItem="dYH-3u-uZW" secondAttribute="bottom" constant="5" id="31a-gi-GiL"/>
+                    <constraint firstItem="Iuq-7v-Xf0" firstAttribute="trailing" secondItem="Kgk-Ms-F3Q" secondAttribute="trailing" id="68Q-J0-ehz"/>
+                    <constraint firstItem="Kgk-Ms-F3Q" firstAttribute="leading" secondItem="mu8-8Q-bVG" secondAttribute="leading" id="EPp-xT-AVp"/>
+                    <constraint firstItem="Kgk-Ms-F3Q" firstAttribute="leading" secondItem="dYH-3u-uZW" secondAttribute="leading" id="PYY-PT-w89"/>
+                    <constraint firstItem="dYH-3u-uZW" firstAttribute="top" secondItem="mu8-8Q-bVG" secondAttribute="top" constant="5" id="UPR-Zi-SvY"/>
+                    <constraint firstAttribute="trailing" secondItem="Kgk-Ms-F3Q" secondAttribute="trailing" id="ZXC-8p-CV4"/>
+                    <constraint firstItem="Kgk-Ms-F3Q" firstAttribute="top" secondItem="Iuq-7v-Xf0" secondAttribute="bottom" constant="1" id="hH2-g9-Bmr"/>
+                    <constraint firstItem="Kgk-Ms-F3Q" firstAttribute="top" secondItem="mu8-8Q-bVG" secondAttribute="top" constant="30" id="n0x-V6-7hv"/>
+                    <constraint firstAttribute="bottom" secondItem="Kgk-Ms-F3Q" secondAttribute="bottom" id="oE8-qF-q5e"/>
+                    <constraint firstItem="Iuq-7v-Xf0" firstAttribute="top" secondItem="mu8-8Q-bVG" secondAttribute="top" constant="6" id="rCV-vT-vU8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="scrollView" destination="Kgk-Ms-F3Q" id="eeQ-tF-o87"/>
+            </connections>
+            <point key="canvasLocation" x="338" y="220.5"/>
+        </tableViewCell>
+    </objects>
+</document>

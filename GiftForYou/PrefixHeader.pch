@@ -1,0 +1,73 @@
+//
+//  PrefixHeader.pch
+//  GiftForYou
+//
+//  Created by lanouhn on 16/3/2.
+//  Copyright © 2016年 zhumingwen. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+// 系统配置
+#define NDSUD [NSUserDefaults standardUserDefaults]
+#define NNCDC [NSNotificationCenter defaultCenter]
+#define FM [NSFileManager defaultManager]
+#define APPSHAREAPP [UIApplication sharedApplication]
+#define appOrientation [[UIApplication sharedApplication] statusBarOrientation]
+#define kDocumentPath NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
+#define DocumentPath [NSString stringWithFormat:@"%@/Library/Caches",NSHomeDirectory()]
+#define IOSSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+
+// 弹框
+#define ShowAlertss(title,msg) [[[UIAlertView alloc]initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil] show];
+
+
+// JSON解析
+#define JsonParserWithData(data) [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]
+
+// 颜色
+#define MLColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define MLColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+
+#define MLBackColor MLColor(235, 235, 241);
+// 随机色
+#define MLRandomColor MLColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256))
+
+// 图片
+#define MLImage(name) [UIImage imageNamed:name]
+// 字体
+#define MLFont(size) [UIFont systemFontOfSize:size]
+
+
+// 存储版本键
+#define MLSaveVersion @"saveVersion"
+// 网络状态键
+#define MLIsNetWork @"isNetWork"
+// 动画时间
+#define kDURATION 0.3
+
+
+#ifdef DEBUG
+#define MLLog(...) NSLog(__VA_ARGS__)
+#else
+#define MLLog(...)
+#endif
+
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AppDelegate.h"
+#import <AFNetworking.h>
+#import <MJRefresh.h>
+#import <UIImageView+WebCache.h>
+#import "UIView+Extension.h"
+#import "Helper.h"
+#import "Viewer.h"
+
+
+#import "MacroHeader.h"
+#import "NetPathHeader.h"
+
+
+#endif /* PrefixHeader_pch */
